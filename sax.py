@@ -5,8 +5,8 @@ import telebot
 from telebot import types
 
 
-#api = os.environ.get("BOT_TOKEN")
-api = "1853760827:AAH1twATlAeuN96f65BFtD6cqWkBDLuo8JM"
+api = os.environ.get("BOT_TOKEN")
+#api = "1853760827:AAH1twATlAeuN96f65BFtD6cqWkBDLuo8JM"
 
 bot = telebot.TeleBot(api, False)
 SUDO_USER = [1842894003, 1367789652, 1197931344]
