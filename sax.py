@@ -29,9 +29,9 @@ def hkeybo(message):
         markop = types.ReplyKeyboardMarkup()
         for i in opp:
             markop.row(i)
-        bot.send_message(message.chat.id, '@KHURANA_OP SAR HI PAMPA HAI', reply_markup=markop)
+        bot.send_message(message.chat.id, '@VENOMxEzz IS PAPA', reply_markup=markop)
     else:
-        bot.reply_to(message, 'SORRY YOU DONT HAVE ACCESS OF THIS BOT')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
 
 
 @bot.message_handler(commands=['add'])
@@ -45,7 +45,7 @@ def add_gu(message):
         except:
             pass
     else:
-        bot.reply_to(message, 'SORRY YOU DONT HAVE ACCESS OF THIS BOT')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
 
 
 @bot.message_handler(commands=['clean'])
