@@ -1,0 +1,18 @@
+{
+    "name": "VC-HEROKU",
+    "description": "TELEGRAM BUTTON BOT MADE BY @CYRAX_IZ_PAPA.",
+    "keywords": ["Tg button", "BUTTON", "telegram"],
+    "repository": "https://github.com/cyraxop123/semxop",
+    "stack": "container",
+    "logo": "https://telegra.ph/file/09ae97cc5278e72bfa991.jpg",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "From @BotFather",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "Full-access users, counted as admin everywhere, seperated by space.",
+            "required": true
+        }
+    }
+  }
