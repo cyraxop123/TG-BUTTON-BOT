@@ -4,13 +4,14 @@ import os
 
 api = os.environ.get("BOT_TOKEN")
 sumdoo = os.environ.get("SUDO_USER").split()
+NAME = os.environ.get("OWNER_USERNAME")
 # sumdoo = "1842894003 1875503588".split()
 #api = "1725327883:AAElGwHLQnHHFPBQN7WB6KxUXd7RpF2xFns"
 bot = telebot.TeleBot(api, False)
 SUDO_USER = [1842894003,1822062027]
 sumdo = [int(i) for i in sumdoo]
 opp = []
-lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /fuk --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /addsudo <USER ID> --> to give access to other user\n7. /removesudo <USER ID> -- Remove user from sudo\n8. /stopbot --> to stop the bot\n9. /sudolist --> List of sudo user\n\n10.\n11. /repo --> TO SEE REPO\n\nOWNER OF BOT:  @VENOMxEzz'
+lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /fuk --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /addsudo <USER ID> --> to give access to other user\n7. /removesudo <USER ID> -- Remove user from sudo\n8. /stopbot --> to stop the bot\n9. /sudolist --> List of sudo user\n\n10.\n11. /repo --> TO SEE REPO\n\nOWNER OF BOT: '
 get_chat = set()
 my_dit = []
 semxy_list = set()
@@ -19,7 +20,7 @@ semxy_list = set()
 @bot.message_handler(commands=['start'])
 def keybo(message):
     bot.reply_to(message, 'BOT IS WORKING FINE')
-    bot.reply_to(message, lop)
+    bot.reply_to(message, lop + NAME)
 
 
 @bot.message_handler(commands=['fuk'])
@@ -29,9 +30,9 @@ def hkeybo(message):
         markop = types.ReplyKeyboardMarkup()
         for i in opp:
             markop.row(i)
-        bot.send_message(message.chat.id, '@VENOMxEzz IS PAPA', reply_markup=markop)
+        bot.send_message(message.chat.id, 'SED', reply_markup=markop)
     else:
-        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
 
 @bot.message_handler(commands=['add'])
@@ -45,7 +46,7 @@ def add_gu(message):
         except:
             pass
     else:
-        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
 
 @bot.message_handler(commands=['clean'])
@@ -58,7 +59,7 @@ def cler(message):
             'List is clear'
         )
     else:
-        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
 
 @bot.message_handler(commands=['see'])
@@ -74,7 +75,7 @@ def dekho(message):
                     f"AVAILABLE POLL OPTION: {i}"
                 )
     else:
-        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
 
 @bot.message_handler(commands=['stopbot'])
@@ -88,7 +89,7 @@ def ending(message):
         except:
             pass
     else:
-        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: @VENOMxEzz')
+        bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
 
 
