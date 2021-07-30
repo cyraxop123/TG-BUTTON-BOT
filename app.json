@@ -10,9 +10,13 @@
             "description": "From @Botfather",
             "required": true
         },
-        "SUDO_USERS": {
+        "SUDO_USER": {
             "description": "Full-access users, counted as admin everywhere, seperated by space.",
             "required": true
         }
+        "OWNER_USERNAME":{
+            "description": "OWNER USERNAME.",
+            "required": true
+         }
     }
   }
