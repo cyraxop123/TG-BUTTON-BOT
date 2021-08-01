@@ -2,12 +2,8 @@ build:
 
   docker:
 
-    release:
+    worker: Dockerfile
 
-       dockerfile: Dockerfile
-
-       target: builder
-
-    web: Dockerfile
 run:
-   worker: python3 sax.py
+
+  worker: python3 sax.py
