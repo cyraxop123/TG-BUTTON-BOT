@@ -1,20 +1,12 @@
-FROM debian:latest
+FROM python:3.7
 
-RUN apt update && apt upgrade -y
+WORKDIR /app
 
-RUN apt install git curl python3-pip ffmpeg -y
+ADD . /app
 
-RUN pip3 install -U pip
+RUN cd /app && \
 
-
-
-RUN mkdir /app/
-
-WORKDIR /app/
-
-COPY . /app/
-
-RUN pip3 install -U -r requirements.txt
+    pip install -r requirements.txt
 
 CMD python3 sax.py
 
