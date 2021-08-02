@@ -9,7 +9,7 @@ bot = telebot.TeleBot(api, False)
 SUDO_USER = [1842894003,1822062027]
 sumdo = [int(i) for i in sumdoo]
 opp = []
-lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /do --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /addsudo <USER ID> --> to give access to other user\n7. /removesudo <USER ID> -- Remove user from sudo\n8. /stopbot --> to stop the bot\n9. /sudolist --> List of sudo user\n\n10.\n11. /repo --> TO SEE REPO\n\nOWNER OF BOT: '
+lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /do --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /stopbot --> to stop the poll\n7. \nOWNER OF BOT: '
 
 get_chat = set()
 my_dit = []
