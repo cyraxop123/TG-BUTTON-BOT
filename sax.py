@@ -5,13 +5,12 @@ import os
 api = os.environ.get("BOT_TOKEN")
 sumdoo = os.environ.get("SUDO_USER").split()
 NAME = os.environ.get("OWNER_USERNAME")
-# sumdoo = "1842894003 1875503588".split()
-#api = "1725327883:AAElGwHLQnHHFPBQN7WB6KxUXd7RpF2xFns"
 bot = telebot.TeleBot(api, False)
 SUDO_USER = [1842894003,1822062027]
 sumdo = [int(i) for i in sumdoo]
 opp = []
-lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /fuk --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /addsudo <USER ID> --> to give access to other user\n7. /removesudo <USER ID> -- Remove user from sudo\n8. /stopbot --> to stop the bot\n9. /sudolist --> List of sudo user\n\n10.\n11. /repo --> TO SEE REPO\n\nOWNER OF BOT: '
+lop = '1. /start --> to check bot ALIVE or NOT\n2. /add <YOUR TEXT> --> To Add Poll\n3. /do --> Starting bot poll\n4. /clean --> To clear polls options\n5. /see --> To see avalable poll option\n6. /addsudo <USER ID> --> to give access to other user\n7. /removesudo <USER ID> -- Remove user from sudo\n8. /stopbot --> to stop the bot\n9. /sudolist --> List of sudo user\n\n10.\n11. /repo --> TO SEE REPO\n\nOWNER OF BOT: '
+
 get_chat = set()
 my_dit = []
 semxy_list = set()
@@ -23,7 +22,7 @@ def keybo(message):
     bot.reply_to(message, lop + NAME)
 
 
-@bot.message_handler(commands=['fuk'])
+@bot.message_handler(commands=['do'])
 def hkeybo(message):
     name = message.from_user.id
     if name in sumdo:
@@ -67,7 +66,8 @@ def dekho(message):
     name = message.from_user.id
     if name in sumdo:
         for i in opp:
-            if i == None or i == 0:
+            if len(opp) == 0:
+
                 bot.send_message('poll is empty!')
             else:
                 bot.reply_to(
@@ -103,6 +103,5 @@ def lemt(message):
             print(i)
 
 
-print('nice')
-
+print('bot is starting...')
 bot.polling(none_stop=True)
