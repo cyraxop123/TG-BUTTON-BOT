@@ -2,7 +2,7 @@
     "name": "TG BUTTON BOT",
     "description": "TELEGRAM BUTTON BOT MADE BY @CYRAX_IZ_PAPA.",
     "keywords": ["Tg button", "BUTTON", "telegram"],
-    "repository": "https://github.com/cyraxop123/semxop",
+    "repository": "https://github.com/cyraxop123/TG-BUTTON-BOT",
     "logo": "https://telegra.ph/file/09ae97cc5278e72bfa991.jpg",
     "env": {
         "BOT_TOKEN": {
