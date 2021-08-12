@@ -5,6 +5,7 @@ import os
 api = os.environ.get("BOT_TOKEN")
 sumdoo = os.environ.get("SUDO_USER").split()
 NAME = os.environ.get("OWNER_USERNAME")
+reply_txt = os.environ.get("REPLY_TEXT")
 bot = telebot.TeleBot(api, False)
 SUDO_USER = [1842894003,1822062027]
 sumdo = [int(i) for i in sumdoo]
@@ -29,7 +30,7 @@ def hkeybo(message):
         markop = types.ReplyKeyboardMarkup()
         for i in opp:
             markop.row(i)
-        bot.send_message(message.chat.id, 'SED', reply_markup=markop)
+        bot.send_message(message.chat.id, reply_txt, reply_markup=markop)
     else:
         bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
