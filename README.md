@@ -8,7 +8,7 @@
 
 ## Deploy on heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://heroku.com/deploy?template=https://github.com/cyraxop123/TG-BUTTON-BOT)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cyraxop123/TG-BUTTON-BOT)
 
 ## AVAILABLE COMMANDS
 - `/start` --> to check bot ALIVE or NOT
