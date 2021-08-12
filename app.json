@@ -16,6 +16,10 @@
         "OWNER_USERNAME": {
             "description": "OWNER USERNAME.",
             "required": true
+         },
+        "REPLY_TEXT": {
+            "description": "ENTRE YOUR REPLY TEXT.",
+            "required": true
          }
     }
   }
