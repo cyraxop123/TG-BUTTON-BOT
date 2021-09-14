@@ -103,3 +103,5 @@ def lemt(message):
 
 print('bot is starting...')
 bot.polling(none_stop=True)
+
+# JUST FAK OF
