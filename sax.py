@@ -67,7 +67,7 @@ def dekho(message):
     name = message.from_user.id
     if name in sumdo:
         if len(opp) == 0:
-            bot.send_message('poll is empty!')
+            bot.send_message(message.chat.id,'poll is empty!')
         else:
             for i in opp:
                  mess = f"Available option {i}\n"
