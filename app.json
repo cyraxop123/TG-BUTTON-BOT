@@ -10,7 +10,7 @@
             "required": true
         },
         "SUDO_USER": {
-            "description": "Full-access users, counted as admin everywhere, seperated by space.",
+            "description": "Enter your id and Full-access users Id, counted as admin everywhere, seperated by space.",
             "required": true
         },
         "OWNER_USERNAME": {
