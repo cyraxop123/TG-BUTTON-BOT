@@ -66,15 +66,12 @@ def cler(message):
 def dekho(message):
     name = message.from_user.id
     if name in sumdo:
-        for i in opp:
-            if len(opp) == 0:
-
-                bot.send_message('poll is empty!')
-            else:
-                bot.reply_to(
-                    message,
-                    f"AVAILABLE POLL OPTION: {i}"
-                )
+        if len(opp) == 0:
+            bot.send_message('poll is empty!')
+        else:
+            for i in opp:
+                 mess = f"Available option {i}\n"
+            bot.reply_to(message, mess)
     else:
         bot.reply_to(message, 'CONTACT MY OWNER FOR SUDO: ' + NAME)
 
